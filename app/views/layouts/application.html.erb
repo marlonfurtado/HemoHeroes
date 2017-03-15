@@ -69,7 +69,8 @@ ga('send', 'pageview');
 <meta property="og:type"               content="website" />
 <!-- End Facebook -->
 
-</head>
+<link rel="manifest" href="/manifest.json" />
+<meta name="apple-mobile-web-app-capable" content="yes"></head>
 
 <body data-controller="<%= controller.controller_name %>" data-action="<%= controller.action_name %>" data-resource="<%=@resourceT unless @resourceT.nil? %>">
 

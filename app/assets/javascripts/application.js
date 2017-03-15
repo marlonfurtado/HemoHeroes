@@ -17,4 +17,5 @@
 //= require vanilla-masker
 //= require smooth-scroll
 //= require utilities/change_on_scroll
+//= require serviceworker-companion
 //= require_tree .
