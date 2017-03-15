@@ -3,48 +3,48 @@
 <div class="Navbar">
   <div class="HeroImage-wrapper">
 
-<div class="navbar HeroImage-header">
+    <div class="navbar HeroImage-header">
 
-  <div class="HeroImage-headerHamburger js-openNavbar">
-  </div>
+      <div class="HeroImage-headerHamburger js-openNavbar">
+      </div>
 
-  <div class="HeroImage-headerContent">
+      <div class="HeroImage-headerContent">
 
 
-    <div class="HeroImage-headerLogo" >
-      <a href="/"><%= image_tag "hemoheroes-logo" %></a>
+        <div class="HeroImage-headerLogo" >
+          <a href="/"><%= image_tag "hemoheroes-logo" %></a>
+        </div>
+
+        <div class="HeroImage-headerLinks js-navbarLinks">
+          <ul>
+            <% if user_blood_donator_signed_in? %>
+            <li>
+              <%= "Bem-vindo, #{current_user_blood_donator.name}" %>
+              <%= link_to('Logout', destroy_user_blood_donator_session_path, :method => :delete) %>
+            </li>
+            <% elsif user_blood_bank_signed_in? %>
+            <li><a data-turbolinks="false" data-scroll href="#comoFunciona">Como funciona</a></li>
+            <li><a data-turbolinks="false" data-scroll href="#onde">Onde doar</a></li>
+            <li><a data-turbolinks="false" data-scroll onclick= "Modal.open('.js-modalRequirements')">Quem pode doar</a></li>
+            <li><a data-turbolinks="false" data-scroll href="#sobre">Sobre</a></li>
+
+            <li>
+
+              <%= link_to('Logout', destroy_user_blood_bank_session_path, :method => :delete) %>
+            </li>
+            <% else %>
+
+            <li><a data-turbolinks="false" data-scroll href="#comoFunciona">Como funciona</a></li>
+            <li><a data-turbolinks="false" data-scroll href="#onde">Onde doar</a></li>
+            <li><a data-turbolinks="false" data-scroll onclick= "Modal.open('.js-modalRequirements')">Quem pode doar</a></li>
+            <li><a data-turbolinks="false" data-scroll href="#sobre">Sobre</a></li>
+
+            <% end %>
+          </ul>
+        </div>
+      </div>
     </div>
-
-    <div class="HeroImage-headerLinks js-navbarLinks">
-      <ul>
-        <% if user_blood_donator_signed_in? %>
-        <li>
-          <%= "Bem-vindo, #{current_user_blood_donator.name}" %>
-          <%= link_to('Logout', destroy_user_blood_donator_session_path, :method => :delete) %>
-        </li>
-        <% elsif user_blood_bank_signed_in? %>
-        <li><a data-turbolinks="false" data-scroll href="#comoFunciona">Como funciona</a></li>
-        <li><a data-turbolinks="false" data-scroll href="#onde">Onde doar</a></li>
-        <li><a data-turbolinks="false" data-scroll onclick= "Modal.open('.js-modalRequirements')">Quem pode doar</a></li>
-        <li><a data-turbolinks="false" data-scroll href="#sobre">Sobre</a></li>
-
-        <li>
-        
-          <%= link_to('Logout', destroy_user_blood_bank_session_path, :method => :delete) %>
-        </li>
-        <% else %>
-
-        <li><a data-turbolinks="false" data-scroll href="#comoFunciona">Como funciona</a></li>
-        <li><a data-turbolinks="false" data-scroll href="#onde">Onde doar</a></li>
-        <li><a data-turbolinks="false" data-scroll onclick= "Modal.open('.js-modalRequirements')">Quem pode doar</a></li>
-        <li><a data-turbolinks="false" data-scroll href="#sobre">Sobre</a></li>
-
-        <% end %>
-      </ul>
-    </div>
   </div>
-</div>
-</div>
 </div>
 
 <% end %>
