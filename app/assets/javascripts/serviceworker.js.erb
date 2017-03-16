@@ -52,7 +52,7 @@ function onFetch(event) {
         }
         // if not found in cache, return default offline content for navigate requests
         if (event.request.mode === 'navigate' ||
-          (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'))) {
+        (event.request.method === 'GET' && event.request.headers.get('accept').includes('text/html'))) {
           console.log('[Serviceworker]', "Fetching offline content", event);
           return caches.match('/offline.html');
         }
@@ -64,3 +64,12 @@ function onFetch(event) {
 self.addEventListener('install', onInstall);
 self.addEventListener('activate', onActivate);
 self.addEventListener('fetch', onFetch);
+
+self.addEventListener('push', function(event) {
+  var title = 'HemoHeroes';
+  var options = {
+    body: 'Doe sangue e salve vidas!',
+    icon: "<%= image_path "Logo-email.png" %>",
+  };
+  event.waitUntil(self.registration.showNotification(title, options));
+});
