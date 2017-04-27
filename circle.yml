@@ -1,5 +1,0 @@
-deployment:
-  staging:
-    branch: master
-    heroku:
-      appname: hemoheroestw-staging # appname must not include upper-case characters
