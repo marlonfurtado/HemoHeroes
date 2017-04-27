@@ -32,7 +32,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'capistrano-rails', group: :development
 
 gem 'geocoder'
-gem 'therubyracer'
+
 
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
@@ -49,10 +49,11 @@ group :development, :test do
 
 end
 
+    gem 'selenium-webdriver'
 group :test do
     gem 'capybara'
     gem 'poltergeist'
-    gem 'selenium-webdriver'
+
     gem 'database_cleaner'
 end
 
