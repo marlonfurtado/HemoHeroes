@@ -48,7 +48,7 @@ group :development, :test do
   gem 'sqlite3'
 
 end
-
+  gem 'phantomjs'
     gem 'selenium-webdriver'
 group :test do
     gem 'capybara'
