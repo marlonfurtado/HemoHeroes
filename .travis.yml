@@ -3,4 +3,4 @@ rvm:
   - 2.3.0
 script:
   - bundle exec rake db:reset
-  - bundle exec rspec -fd
+  - bundle exec rspec
