@@ -50,6 +50,7 @@ group :development, :test do
 end
   gem 'phantomjs'
     gem 'selenium-webdriver'
+    gem 'mini_racer'
 group :test do
     gem 'capybara'
     gem 'poltergeist'
