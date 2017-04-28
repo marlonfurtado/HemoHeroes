@@ -1,5 +1,5 @@
-ruby: 2.3.0
-box: ruby:2.3.0
+ruby: 2.3.1
+box: ruby:2.3.1
 build:
     steps:
         - bundle-install
