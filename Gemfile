@@ -13,7 +13,6 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 
-
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -33,28 +32,24 @@ gem 'jbuilder', '~> 2.5'
 
 gem 'geocoder'
 
-
 gem 'devise'
 gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 
 gem 'coveralls', require: false
-gem 'rspec-rails', '~> 3.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
   # Use sqlite3 as the database for Active Record
   gem 'sqlite3'
-
+  gem 'rspec-rails', '~> 3.5'
 end
-  gem 'phantomjs'
-    gem 'selenium-webdriver'
-    gem 'mini_racer'
+
 group :test do
     gem 'capybara'
     gem 'poltergeist'
-
+    gem 'selenium-webdriver'
     gem 'database_cleaner'
 end
 
