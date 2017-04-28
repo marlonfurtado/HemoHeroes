@@ -1,6 +1,7 @@
 # HEMOHEROES
 
-Travis: [![Build Status](https://travis-ci.org/marlonfurtado/HemoHeroes.svg?branch=master)](https://travis-ci.org/marlonfurtado/HemoHeroes)
+Wercker CI:  
+[![wercker status](https://app.wercker.com/status/7bf82ac2001afe58f4c2784767199e0f/m/ "wercker status")](https://app.wercker.com/project/byKey/7bf82ac2001afe58f4c2784767199e0f)
 
 HemoHeroes é uma aplicação para conectar Bancos de Sangue aos doadores em potencial.
 
